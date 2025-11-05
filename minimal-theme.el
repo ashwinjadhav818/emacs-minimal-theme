@@ -2,10 +2,10 @@
 
 ;; Copyright (C) 2014 A. Hdez
 
-;; Author: A. Hdez <trefoil_chilled_7k@icloud.com>
+;; Author: A. Hdez <trefoil_chilled_7k@icloud.com > & Ashwin Jadhav
 ;; Keywords: color, theme, minimal
-;; X-URL: http://github.com/nullvec/minimal-theme
-;; URL: http://github.com/nullvec/minimal-theme
+;; X-URL: https://github.com/ashwinjadhav818/emacs-minimal-theme
+;; URL: https://github.com/ashwinjadhav818/emacs-minimal-theme
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -47,6 +47,15 @@
        (hl-face-background nil)
        (failure "red")
        (org-background "grey8")
+
+       (color-black "#15161e")
+       (color-red "#f7768e")
+       (color-green "#9ece6a")
+       (color-yellow "#e0af68")
+       (color-blue "#7aa2f7")
+       (color-magenta "#bb9af7")
+       (color-cyan "#7dcfff")
+       (color-white "#a9b1d6")
        )
   (setq fci-rule-color comment)
   (custom-theme-set-faces
@@ -117,14 +126,14 @@
      `(hl-line-face ((,class (:background ,hl-face-background))))
 
      ;; org-mode
-     `(org-level-1 ((,class (:foreground ,foreground :height 1.6))))
-     `(org-level-2 ((,class (:foreground ,foreground :height 1.5))))
-     `(org-level-3 ((,class (:foreground ,foreground :height 1.4))))
-     `(org-level-4 ((,class (:foreground ,foreground :height 1.3))))
-     `(org-level-5 ((,class (:foreground ,foreground :height 1.2))))
-     `(org-level-6 ((,class (:foreground ,foreground :height 1.1))))
-     `(org-level-7 ((,class (:foreground ,foreground))))
-     `(org-level-8 ((,class (:foreground ,foreground))))
+     `(org-level-1 ((,class (:foreground ,color-red :weight bold))))
+     `(org-level-2 ((,class (:foreground ,color-magenta :weight bold))))
+     `(org-level-3 ((,class (:foreground ,color-yellow :weight bold))))
+     `(org-level-4 ((,class (:foreground ,color-blue :weight bold))))
+     `(org-level-5 ((,class (:foreground ,color-green :weight bold))))
+     `(org-level-6 ((,class (:foreground ,color-cyan :weight bold))))
+     `(org-level-7 ((,class (:foreground ,color-red :weight bold))))
+     `(org-level-8 ((,class (:foreground ,color-white :weight bold))))
 
      ;; outline
      `(outline-1 ((,class (:inherit org-level-1))))
