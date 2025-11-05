@@ -128,12 +128,12 @@
 
    ;; org-mode
    `(org-level-1 ((,class (:foreground ,color-red :weight bold))))
-   `(org-level-2 ((,class (:foreground ,color-orange :weight bold))))
+   `(org-level-2 ((,class (:foreground ,color-magenta :weight bold))))
    `(org-level-3 ((,class (:foreground ,color-yellow :weight bold))))
-   `(org-level-4 ((,class (:foreground ,color-magenta :weight bold))))
-   `(org-level-5 ((,class (:foreground ,color-blue :weight bold))))
+   `(org-level-4 ((,class (:foreground ,color-blue :weight bold))))
+   `(org-level-5 ((,class (:foreground ,color-green :weight bold))))
    `(org-level-6 ((,class (:foreground ,color-cyan :weight bold))))
-   `(org-level-7 ((,class (:foreground ,color-green :weight bold))))
+   `(org-level-7 ((,class (:foreground ,color-red :weight bold))))
    `(org-level-8 ((,class (:foreground ,color-white :weight bold))))
 
    ;; outline
