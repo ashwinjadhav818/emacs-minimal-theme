@@ -43,6 +43,10 @@
        (modeline-background "grey95")
        (modeline-foreground-inactive comment)
        (modeline-background-inactive background)
+       (tabbar-foreground foreground)
+       (tabbar-background "grey95")
+       (tabbar-foreground-inactive comment)
+       (tabbar-background-inactive background)
        (hl-background region)
        (hl-face-background nil)
        (failure "red")
@@ -182,6 +186,16 @@
      `(js2-magic-paren ((,class (:underline t))))
      `(js2-private-function-call ((,class (:inherit base-faces))))
      `(js2-private-member ((,class (:inherit base-faces))))
+
+	 ;; centaur-tabs
+     `(centaur-tabs-default ((t (:background ,tabbar-background :foreground ,tabbar-foreground :box nil))))
+     `(centaur-tabs-selected ((t (:background ,tabbar-background :foreground ,tabbar-foreground :box nil))))
+     `(centaur-tabs-unselected ((t (:background ,tabbar-background :foreground ,tabbar-foreground-inactive :box nil))))
+     `(centaur-tabs-selected-modified ((t (:background ,tabbar-background :foreground ,color-red :box nil))))
+     `(centaur-tabs-unselected-modified ((t (:background ,tabbar-background :foreground ,color-red :box nil))))
+     `(centaur-tabs-active-bar-face ((t (:background ,color-yellow :box nil))))
+     `(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected-modified :foreground ,color-yellow :box nil))))
+     `(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected-modified :foreground ,color-yellow :box nil))))
    ))
 
 ;;;###autoload
