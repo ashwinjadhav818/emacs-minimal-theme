@@ -29,38 +29,43 @@
 (deftheme minimal-black "minimal dark theme.")
 
 (let* ((class '((class color) (min-colors 89)))
-       (foreground "grey90")
-       (background "black")
-       (cursor "white")
-       (border background)
-       (minibuffer cursor)
-       (region "grey20")
-       (comment-delimiter "grey16")
-       (comment "grey25")
-       (constant foreground)
-       (string "grey70")
-       (modeline-foreground background)
-       (modeline-background "grey95")
-       (modeline-foreground-inactive comment)
-       (modeline-background-inactive background)
-       (tabbar-foreground background)
-       (tabbar-background "grey95")
-       (tabbar-foreground-inactive comment)
-       (tabbar-background-inactive background)
-       (hl-background region)
-       (hl-face-background nil)
-       (failure "red")
-       (org-background "grey8")
+    (background "#000000")
+    (foreground "#d5e0e4")
+    (cursor "#80cbc4")
+    (border "#424242")
+    (failure "#e57373")
 
-       (color-black "#15161e")
-       (color-red "#f7768e")
-       (color-green "#9ece6a")
-       (color-yellow "#e0af68")
-       (color-blue "#7aa2f7")
-       (color-magenta "#bb9af7")
-       (color-cyan "#7dcfff")
-       (color-white "#a9b1d6")
-       )
+    (region "#3e3e3e")
+    (comment "#757575")
+    (comment-delimiter comment)
+    (string "#a5d6a7")
+    (org-background background)
+
+    (modeline-background "#1c1c1c")
+    (modeline-foreground "#ffffff")
+    (modeline-background-active "#070707")
+    (modeline-foreground-active "#ffffff")
+    (modeline-background-inactive "#3e3e3e")
+    (modeline-foreground-inactive comment)
+    (tabbar-background modeline-background)
+    (tabbar-foreground modeline-foreground)
+    (tabbar-background-active modeline-background-active)
+    (tabbar-foreground-active modeline-foreground-active)
+    (tabbar-background-inactive modeline-background-inactive)
+    (tabbar-foreground-inactive modeline-foreground-inactive)
+
+    (hl-background region)
+    (hl-face-background nil)
+    (minibuffer cursor)
+
+    (color-red "#e57373")
+    (color-green "#a5d6a7")
+    (color-yellow "#ffd54f")
+    (color-blue "#64b5f6")
+    (color-magenta "#ba68c8")
+    (color-cyan "#4dd0e1")
+    (color-white "#cccccc"))
+
   (setq fci-rule-color comment)
   (custom-theme-set-faces
    'minimal-black
@@ -110,21 +115,25 @@
    ;; modeline
    `(mode-line
      ((,class (:inverse-video unspecified
-                              :overline ,border
+                              :overline nil
                               :underline nil
-                              :foreground ,modeline-foreground
-                              :background ,modeline-background
-                              :box (:line-width 1 :color ,background)
+                              :foreground ,modeline-foreground-active
+                              :background ,modeline-background-active
+                              :box nil
                               ))))
    `(mode-line-buffer-id ((,class (:weight bold))))
    `(mode-line-inactive
      ((,class (:inverse-video unspecified
-                              :overline ,border
+                              :overline nil
                               :underline nil
-                              :foreground ,modeline-foreground-inactive
-                              :background ,modeline-background-inactive
-                              :box (:line-width 1 :color ,border)
+                              :foreground ,modeline-foreground
+                              :background ,modeline-background
                               ))))
+
+   ;; tabbar
+   `(tab-bar ((t (:background ,tabbar-background :foreground ,tabbar-foreground :box nil))))
+   `(tab-line ((t (:background ,tabbar-background :foreground ,tabbar-foreground :box nil))))
+   `(tab-bar-tab ((t (:background ,tabbar-background-active :foreground ,tabbar-foreground-active :box nil))))
 
    ;; hl-line-mode
    `(hl-line ((,class (:background ,hl-background))))
@@ -181,15 +190,15 @@
    `(js2-private-function-call ((,class (:inherit base-faces))))
    `(js2-private-member ((,class (:inherit base-faces))))
 
-   	 ;; centaur-tabs
-     `(centaur-tabs-default ((t (:background ,tabbar-background :foreground ,tabbar-foreground :box nil))))
-     `(centaur-tabs-selected ((t (:background ,tabbar-background :foreground ,tabbar-foreground :box nil))))
-     `(centaur-tabs-unselected ((t (:background ,tabbar-background :foreground ,tabbar-foreground-inactive :box nil))))
-     `(centaur-tabs-selected-modified ((t (:background ,tabbar-background :foreground ,color-red :box nil))))
-     `(centaur-tabs-unselected-modified ((t (:background ,tabbar-background :foreground ,color-red :box nil))))
-     `(centaur-tabs-active-bar-face ((t (:background ,color-yellow :box nil))))
-     `(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected-modified :foreground ,color-yellow :box nil))))
-     `(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected-modified :foreground ,color-yellow :box nil))))
+   ;; centaur-tabs
+   `(centaur-tabs-default ((t (:background ,tabbar-background :foreground ,tabbar-foreground :box nil))))
+   `(centaur-tabs-selected ((t (:background ,tabbar-background-active :foreground ,tabbar-foreground-active :box nil))))
+   `(centaur-tabs-unselected ((t (:background ,tabbar-background :foreground ,tabbar-foreground-inactive :box nil))))
+   `(centaur-tabs-selected-modified ((t (:background ,tabbar-background :foreground ,color-red :box nil))))
+   `(centaur-tabs-unselected-modified ((t (:background ,tabbar-background :foreground ,color-red :box nil))))
+   `(centaur-tabs-active-bar-face ((t (:background ,color-yellow :box nil))))
+   `(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected-modified :foreground ,color-yellow :box nil))))
+   `(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected-modified :foreground ,color-yellow :box nil))))
    ))
 
 ;;;###autoload
