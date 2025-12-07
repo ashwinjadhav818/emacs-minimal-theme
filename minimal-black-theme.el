@@ -1,8 +1,8 @@
 ;;; minimal-black-theme.el --- A light/dark minimalistic Emacs 24 theme.
 
-;; Copyright (C) 2014 A. Hdez
+;; Copyright (C) 2025 A. Hdez & Ashwin Jadhav
 
-;; Author: A. Hdez <trefoil_chilled_7k@icloud.com> & Ashwin Jadhav
+;; Author: A. Hdez & Ashwin Jadhav
 ;; Keywords: color, theme, minimal
 ;; X-URL: https://github.com/ashwinjadhav818/emacs-minimal-theme
 ;; URL: https://github.com/ashwinjadhav818/emacs-minimal-theme
