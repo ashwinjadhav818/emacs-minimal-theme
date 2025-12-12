@@ -83,11 +83,11 @@
    `(secondary-selection ((,class (:background ,region))))
 
    ;; faces
-   `(font-lock-builtin-face ((,class (:foreground ,foreground :weight bold))))
-   `(font-lock-constant-face ((,class (:foreground ,foreground :weight bold))))
-   `(font-lock-keyword-face ((,class (:foreground ,foreground :weight bold))))
+   `(font-lock-builtin-face ((,class (:foreground ,color-red :weight bold))))
+   `(font-lock-constant-face ((,class (:foreground ,color-blue :weight bold))))
+   `(font-lock-keyword-face ((,class (:foreground ,color-cyan :weight bold))))
    `(font-lock-type-face ((,class (:foreground ,foreground :slant italic))))
-   `(font-lock-function-name-face ((,class (:foreground ,foreground :weight bold))))
+   `(font-lock-function-name-face ((,class (:foreground ,color-red :weight bold))))
    `(font-lock-variable-name-face ((,class (:foreground ,foreground))))
 
    `(font-lock-comment-delimiter-face ((,class (:foreground ,comment-delimiter))))
